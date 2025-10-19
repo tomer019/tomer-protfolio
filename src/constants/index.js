@@ -21,41 +21,52 @@ export const navLinks = [
   },
 ];
 
-export const clientReviews = [
+export const myProjects = [
   {
-    id: 1,
-    name: 'Emily Johnson',
-    position: 'Marketing Director at GreenLeaf',
-    img: 'assets/review1.png',
-    review:
-      'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
+    title: 'MailASP - Full-Stack Gmail Clone',
+    desc: 'A fully functional email system built from scratch as part of an academic full-stack project. It supports sending, receiving, updating, and deleting emails, label management, and a local spam filter using a C++ Bloom Filter server.',
+    subdesc:
+      'Developed with Node.js, Express, Python client, and a C++ backend server connected via TCP sockets. Features JWT authentication, Dockerized environment, and modular architecture.',
+    href: 'https://github.com/tomer019/Mail-System',
+    texture: '/textures/project/mail.mp4', // אם אין לך, פשוט תשים תמונה
+    logo: '/assets/project-logo-mail.png',
+    logoStyle: {
+      backgroundColor: '#08121A',
+      border: '0.2px solid #0C1F2A',
+      boxShadow: '0px 0px 60px 0px #00C6FF4D',
+    },
+    spotlight: '/assets/spotlight-mail.png',
+    tags: [
+      { id: 1, name: 'C++', path: '/assets/cpp.png' },
+      { id: 2, name: 'Python', path: '/assets/python.png' },
+      { id: 3, name: 'Node.js', path: '/assets/node.png' },
+      { id: 4, name: 'Docker', path: '/assets/docker.png' },
+    ],
   },
   {
-    id: 2,
-    name: 'Mark Rogers',
-    position: 'Founder of TechGear Shop',
-    img: 'assets/review2.png',
-    review:
-      'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
-  },
-  {
-    id: 3,
-    name: 'John Dohsas',
-    position: 'Project Manager at UrbanTech ',
-    img: 'assets/review3.png',
-    review:
-      'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
-  },
-  {
-    id: 4,
-    name: 'Ether Smith',
-    position: 'CEO of BrightStar Enterprises',
-    img: 'assets/review4.png',
-    review:
-      'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
+    title: 'Arkanoid - Java Game Project',
+    desc: 'A modern recreation of the classic Arkanoid arcade game, developed entirely in Java using object-oriented programming principles. Features ball physics, scoring, levels, and collision detection.',
+    subdesc:
+      'Built as part of the Advanced Programming course using biuoop GUI library and modular design patterns for scalability and clean architecture.',
+    href: 'https://github.com/tomer019/Arkanoid',
+    texture: '/textures/project/arkanoid.mp4', // או תמונה אם אין וידאו
+    logo: '/assets/project-logo-arkanoid.png',
+    logoStyle: {
+      backgroundColor: '#1C1A43',
+      border: '0.2px solid #252262',
+      boxShadow: '0px 0px 60px 0px #635BFF4D',
+    },
+    spotlight: '/assets/spotlight-arkanoid.png',
+    tags: [
+      { id: 1, name: 'Java', path: '/assets/java.png' },
+      { id: 2, name: 'OOP', path: '/assets/oop.png' },
+      { id: 3, name: 'Design Patterns', path: '/assets/pattern.png' },
+    ],
   },
 ];
 
+
+/*
 export const myProjects = [
   {
     title: 'Podcastr - AI Podcast Platform',
@@ -245,6 +256,7 @@ export const myProjects = [
     ],
   },
 ];
+*/
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
   return {
@@ -256,33 +268,3 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
     targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
   };
 };
-
-export const workExperiences = [
-  {
-    id: 1,
-    name: 'Framer',
-    pos: 'Lead Web Developer',
-    duration: '2022 - Present',
-    title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
-    icon: '/assets/framer.svg',
-    animation: 'victory',
-  },
-  {
-    id: 2,
-    name: 'Figma',
-    pos: 'Web Developer',
-    duration: '2020 - 2022',
-    title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
-    icon: '/assets/figma.svg',
-    animation: 'clapping',
-  },
-  {
-    id: 3,
-    name: 'Notion',
-    pos: 'Junior Web Developer',
-    duration: '2019 - 2020',
-    title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-    icon: '/assets/notion.svg',
-    animation: 'salute',
-  },
-];

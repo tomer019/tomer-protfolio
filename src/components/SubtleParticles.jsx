@@ -13,16 +13,18 @@ const SubtleParticles = () => {
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
             r: Math.random() * 1.3 + 0.4,
-            dx: (Math.random() - 0.5) * 0.425,
+            dx: (Math.random() - 0.5) * 0.45,
             dy: (Math.random() - 0.5) * 0.45,
         }));
 
         function animate() {
-            ctx.fillStyle = "rgba(5,5,7,0.2)";
+            // 🧹 נקה את המסך בשחור חצי שקוף
+            ctx.fillStyle = "rgba(10,10,15,0.35)";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            ctx.fillStyle = "rgba(255,255,255,0.35)";
-            particles.forEach(p => {
+            // ✨ חלקיקים
+            ctx.fillStyle = "rgba(180, 220, 255, 0.35)";
+            particles.forEach((p) => {
                 p.x += p.dx;
                 p.y += p.dy;
                 if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
