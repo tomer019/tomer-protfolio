@@ -4,11 +4,13 @@ import About from "./sections/About.jsx";
 import Projects from "./sections/Projects.jsx";
 import Contact from "./sections/Contact.jsx";
 import Skills from "./sections/Skills.jsx";
+import Navbar from "./sections/Navbar.jsx";
 
 function App() {
   return (
     <main className="relative text-white min-h-screen overflow-hidden">
       <SubtleParticles /> {/* רקע חי, רגוע, נצחי */}
+      <Navbar />
       <div className="relative z-10">
         <Hero />
         <About />
