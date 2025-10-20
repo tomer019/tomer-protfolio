@@ -2,6 +2,9 @@
   "name": "threejscc-portfolio",
   "private": true,
   "version": "0.0.0",
+  "resolutions": {
+    "three": "0.160.0"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -22,9 +25,10 @@
     "prettier": "^3.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-force-graph-3d": "^1.29.0",
     "react-globe.gl": "^2.27.2",
     "react-responsive": "^10.0.0",
-    "three": "^0.167.1",
+    "three": "^0.180.0",
     "three-stdlib": "^2.32.2"
   },
   "devDependencies": {

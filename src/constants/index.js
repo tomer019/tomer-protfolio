@@ -58,9 +58,9 @@ export const myProjects = [
     },
     spotlight: '/assets/spotlight-arkanoid.png',
     tags: [
-      { id: 1, name: 'Java', path: '/assets/java.png' },
-      { id: 2, name: 'OOP', path: '/assets/oop.png' },
-      { id: 3, name: 'Design Patterns', path: '/assets/pattern.png' },
+      { id: 1, name: 'Java', path: '/assets/java.svg' },
+      { id: 2, name: 'OOP', path: '/assets/oop.jpg' },
+      { id: 3, name: 'Design Patterns', path: '/assets/pattern.svg' },
     ],
   },
 ];
