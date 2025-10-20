@@ -25,14 +25,15 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
-          from_name: form.name,
-          to_name: 'JavaScript Mastery',
-          from_email: form.email,
-          to_email: 'sujata@jsmastery.pro',
-          message: form.message,
+          from_name: form.name, // שם השולח
+          from_email: form.email, // המייל שהוזן בטופס
+          to_name: 'Tomer Grady', // השם שלך - איך שתרצה שיופיע בתבנית
+          to_email: 'tomer0191@gmail.com', // המייל שאליו תישלח ההודעה
+          message: form.message, // תוכן ההודעה
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
+
       .then(
         () => {
           setLoading(false);
