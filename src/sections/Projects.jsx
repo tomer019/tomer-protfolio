@@ -30,8 +30,47 @@ const Projects = () => {
   const currentProject = myProjects[selectedProjectIndex];
 
   return (
-    <section className="c-space my-20">
-      <p className="head-text">My Selected Work</p>
+    <section
+      id="skills"
+      className="relative z-10 text-gray-100 px-8 sm:px-16 md:px-28 lg:px-10 py-16 mb-16 "
+    >
+
+      <div className="flex justify-center">
+        <h1
+          className="
+      text-3xl md:text-5xl font-semibold 
+      mb-6
+      tracking-tight relative inline-block
+      text-center
+      -translate-y-4
+    "
+        >
+          {/* רקע מטושטש מאחור */}
+          <span
+            className="
+        absolute inset-0 
+        blur-md 
+        bg-gradient-to-r from-[#00C6FF]/30 via-[#8A2BE2]/20 to-[#00C6FF]/30 
+        rounded-md 
+        -z-10
+      "
+          ></span>
+
+          {/* טקסט עם gradient ומעל הרקע */}
+          <span
+            className="
+        relative z-10 
+        bg-gradient-to-r from-[#00C6FF] via-[#8A2BE2] to-[#00C6FF] 
+        bg-clip-text 
+        text-transparent 
+        drop-shadow-[0_0_18px_rgba(0,198,255,0.45)]
+      "
+          >
+            My Selected Works
+          </span>
+        </h1>
+      </div>
+
 
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">

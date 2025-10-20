@@ -37,10 +37,10 @@ export const myProjects = [
     },
     spotlight: '/assets/spotlight-mail.png',
     tags: [
-      { id: 1, name: 'C++', path: '/assets/cpp.png' },
-      { id: 2, name: 'Python', path: '/assets/python.png' },
-      { id: 3, name: 'Node.js', path: '/assets/node.png' },
-      { id: 4, name: 'Docker', path: '/assets/docker.png' },
+      { id: 1, name: 'C++', path: '/assets/cpp.svg' },
+      { id: 2, name: 'Python', path: '/assets/python.svg' },
+      { id: 3, name: 'Node.js', path: '/assets/node.svg' },
+      { id: 4, name: 'Docker', path: '/assets/docker.svg' },
     ],
   },
   {

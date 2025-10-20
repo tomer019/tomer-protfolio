@@ -19,8 +19,8 @@
 ---
 
 ## 🎨 Phase 2: Content & Design
-- [ ] Replace all old names, texts, and references with your own details  
-- [ ] Update the **About** and **Hero** sections to match your personal story and tone  
+- [1 ] Replace all old names, texts, and references with your own details  
+- [ 1] Update the **About** and **Hero** sections to match your personal story and tone  
 - [ ] Add missing **skill icons** (C++, Docker, MongoDB, Git, etc.)  
 - [ ] Record or create a short demo video of your **MailASP** project (`mail.mp4`)  
   - Recommended: use OBS or any simple screen recorder  

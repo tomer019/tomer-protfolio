@@ -32,7 +32,8 @@ const About = () => {
 
         <p className="text-xl md:text-2xl text-gray-400 leading-relaxed">
           I’m fascinated by systems — from low-level architecture to high-level machine learning.
-          My approach combines logic, curiosity, and calm precision.
+          My approach combines logic, curiosity, and calm precision.  I’m passionate about
+          leveraging technology to solve real-world problems and create positive change.
         </p>
       </div>
     </section>
