@@ -9,40 +9,52 @@ import { Float, useGLTF, useTexture } from '@react-three/drei';
 
 const Cube = ({ ...props }) => {
   const { nodes } = useGLTF('models/cube.glb');
-
   const texture = useTexture('textures/cube.png');
-
   const cubeRef = useRef();
   const [hovered, setHovered] = useState(false);
 
+  // Find the first mesh automatically (no matter what it's called)
+  const mesh = Object.values(nodes).find((n) => n.isMesh);
+
   useGSAP(() => {
-    gsap
-      .timeline({
-        repeat: -1,
-        repeatDelay: 0.5,
-      })
-      .to(cubeRef.current.rotation, {
-        y: hovered ? '+=2' : `+=${Math.PI * 2}`,
-        x: hovered ? '+=2' : `-=${Math.PI * 2}`,
-        duration: 2.5,
-        stagger: {
-          each: 0.15,
-        },
-      });
+    const tl = gsap.timeline({ repeat: -1, yoyo: true });
+
+    tl.to(cubeRef.current.rotation, {
+      y: "+=" + Math.PI / 4,
+      x: "-=" + Math.PI / 6,
+      duration: 2,
+      ease: "sine.inOut",
+    });
+
+    tl.to(cubeRef.current.position, {
+      y: "+=0.3",
+      duration: 2,
+      ease: "sine.inOut",
+    }, "<");
   });
+
+
+  if (!mesh) return null; // prevents crash if model not yet loaded
 
   return (
     <Float floatIntensity={2}>
-      <group position={[9, -4, 0]} rotation={[2.6, 0.8, -1.8]} scale={0.74} dispose={null} {...props}>
+      <group
+        position={[9, -4, 0]}
+        rotation={[2.6, 0.8 + Math.PI, -1.8]}
+
+        scale={0.025}
+        dispose={null}
+        {...props}
+      >
         <mesh
           ref={cubeRef}
           castShadow
           receiveShadow
-          geometry={nodes.Cube.geometry}
-          material={nodes.Cube.material}
-          onPointerEnter={() => setHovered(true)}>
-          <meshMatcapMaterial matcap={texture} toneMapped={false} />
-        </mesh>
+          geometry={mesh.geometry}
+          material={mesh.material} // 👈 השתמש ב־material המקורי
+          onPointerEnter={() => setHovered(true)}
+        />
+
       </group>
     </Float>
   );
