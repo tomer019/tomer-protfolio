@@ -13,6 +13,10 @@ import CanvasLoader from '../components/Loading.jsx';
 import HeroCamera from '../components/HeroCamera.jsx';
 import { calculateSizes } from '../constants/index.js';
 import { HackerRoom } from '../components/HackerRoom.jsx';
+import EnergyCoreCosmic from '../components/EnergyCoreCosmic.jsx';
+import EnergyCore from '../components/EnergyCore.jsx';
+
+
 
 const Hero = () => {
   // Use media queries to determine screen size
@@ -53,10 +57,20 @@ const Hero = () => {
             </HeroCamera>
 
             <group>
-              <Target position={sizes.targetPosition} />
-              <ReactLogo position={sizes.reactLogoPosition} />
-              <Rings position={sizes.ringPosition} />
+
+              {/*{ <ReactLogo position={sizes.reactLogoPosition} /> }
+<Target position={sizes.targetPosition} />
+              <ambientLight intensity={0.15} />
+              <pointLight position={[2, 2, 2]} intensity={1.2} />
+              <EnergyCoreCosmic position={sizes.reactLogoPosition} />
+              <EnergyCore position={sizes.reactLogoPosition} />
+              
               <Cube position={sizes.cubePosition} />
+              <Rings position={sizes.ringPosition} />
+              <Rings position={sizes.cubePosition} />
+              */
+            }
+
             </group>
 
             <ambientLight intensity={1} />

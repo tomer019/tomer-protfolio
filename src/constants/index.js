@@ -19,7 +19,6 @@ export const myProjects = [
       border: '0.2px solid #0C1F2A',
       boxShadow: '0px 0px 60px 0px #00C6FF4D',
     },
-    spotlight: '/assets/spotlight-mail.png',
     tags: [
       { id: 1, name: 'C++', path: '/assets/cpp.svg' },
       { id: 2, name: 'Python', path: '/assets/python.svg' },
@@ -40,7 +39,6 @@ export const myProjects = [
       border: '0.2px solid #252262',
       boxShadow: '0px 0px 60px 0px #635BFF4D',
     },
-    spotlight: '/assets/spotlight-arkanoid.png',
     tags: [
       { id: 1, name: 'Java', path: '/assets/java.svg' },
       { id: 2, name: 'OOP', path: '/assets/oop.jpg' },

@@ -42,7 +42,7 @@ const Cube = ({ ...props }) => {
         position={[9, -4, 0]}
         rotation={[2.6, 0.8 + Math.PI, -1.8]}
 
-        scale={0.025}
+        scale={0.05}
         dispose={null}
         {...props}
       >
