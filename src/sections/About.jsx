@@ -18,7 +18,7 @@ const About = () => {
       className="min-h-screen w-full flex flex-col md:flex-row items-center justify-center bg-[#050507]/1 text-gray-100 px-10 md:px-24 py-20"
     >
       {/* 🖼️ Profile Image — 10% width */}
-      <div className="flex-[0.1] flex justify-center items-center mb-10 md:mb-0">
+      <div className="flex-[0.1] flex justify-center items-center mb-10 md:mb-15 md:-mr-16">
         <div className="relative">
           <img
             src="assets/profile.jpg"
