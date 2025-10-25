@@ -19,7 +19,8 @@ const SubtleParticles = () => {
 
         function animate() {
             // 🧹 נקה את המסך בשחור חצי שקוף
-            ctx.fillStyle = "rgba(10,10,15,0.35)";
+            ctx.fillStyle = "rgba(40, 45, 60, 0.20)";
+
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             // ✨ חלקיקים
