@@ -4,81 +4,85 @@ import { Canvas } from '@react-three/fiber';
 import { useMediaQuery } from 'react-responsive';
 import { PerspectiveCamera } from '@react-three/drei';
 
+import Cube from '../components/Cube.jsx';
+import Rings from '../components/Rings.jsx';
+import ReactLogo from '../components/ReactLogo.jsx';
 import Button from '../components/Button.jsx';
+import Target from '../components/Target.jsx';
 import CanvasLoader from '../components/Loading.jsx';
 import HeroCamera from '../components/HeroCamera.jsx';
 import { calculateSizes } from '../constants/index.js';
 import { HackerRoom } from '../components/HackerRoom.jsx';
+import EnergyCoreCosmic from '../components/EnergyCoreCosmic.jsx';
+import EnergyCore from '../components/EnergyCore.jsx';
+
+
 
 const Hero = () => {
+  // Use media queries to determine screen size
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
+
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   return (
-    <section
-      id="home"
-      className="min-h-screen w-full flex flex-col sm:flex-row items-center justify-between c-space relative"
-    >
-      {/* ===== LEFT SIDE (TEXT) ===== */}
-      <div className="flex-1 sm:pl-24 px-6 flex flex-col gap-6 z-10 text-left">
-      <h1
-  className="text-6xl md:text-8xl font-black 
-             bg-gradient-to-r from-[#00C6FF] via-[#8A2BE2] to-[#00C6FF] 
-             bg-clip-text text-transparent 
-             drop-shadow-[0_0_35px_rgba(0,198,255,0.45)]
-             font-generalsans tracking-tight leading-[1.1]"
->
+    <section className="min-h-screen w-full flex flex-col relative" id="home">
+      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
+        <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
+          Hi, I am Tomer <span className="waving-hand">👋</span>
+        </p>
+        <p className="hero_tag text-gray_gradient">From Vision to Execution</p>
+      </div>
 
-<p
- className="text-gray-200 text-2xl sm:text-3xl 
-           max-w-2xl leading-relaxed font-normal tracking-wide"
+      <div className="w-full h-full absolute inset-0">
+        <Canvas
+          gl={{ alpha: true }}
+          style={{ background: 'transparent' }}
+          className="w-full h-full"
+        >
 
->
-  I’m a computer science student and full-stack developer passionate about 
-  building systems that merge technology and creativity
-  From backend C++ servers to 3D web experiences, I turn complex ideas into clean, 
-  interactive realities.
-</p>
-
-
-
-        {/* --- BUTTON (moved slightly left) --- */}
-<a
-  href="#about"
-  className="mt-6"
-  style={{ transform: 'translateX(-224px)' }} // 👈 הוזז בערך 2 ס"מ נוספים שמאלה
->
-  <Button
-    name="Let's work together"
-    isBeam
-    containerClass="sm:w-fit w-full sm:min-w-72"
-  />
-</a>
-
-
-      </div> {/* ✅ properly closed left-side div */}
-
-      {/* ===== RIGHT SIDE (3D MODEL) ===== */}
-      <div className="flex-1 relative w-full h-[500px] sm:h-screen">
-        <Canvas gl={{ alpha: true }} style={{ background: 'transparent' }}>
           <Suspense fallback={<CanvasLoader />}>
+            {/* To hide controller */}
             <Leva hidden />
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
             <HeroCamera isMobile={isMobile}>
               <HackerRoom
-                scale={isMobile ? 3.5 : 5}
-                position={[-2, -2, 0]}  // 👈 moved a bit more left
+                scale={4}
+                position={[0, -2, 0]}
                 rotation={[0, 0, 0]}
               />
+
             </HeroCamera>
 
-            <ambientLight intensity={1.1} />
-            <directionalLight position={[10, 10, 10]} intensity={0.6} />
+            <group>
+
+              {/*{ <ReactLogo position={sizes.reactLogoPosition} /> }
+<Target position={sizes.targetPosition} />
+              <ambientLight intensity={0.15} />
+              <pointLight position={[2, 2, 2]} intensity={1.2} />
+              <EnergyCoreCosmic position={sizes.reactLogoPosition} />
+              <EnergyCore position={sizes.reactLogoPosition} />
+              
+              <Cube position={sizes.cubePosition} />
+              <Rings position={sizes.ringPosition} />
+              <Rings position={sizes.cubePosition} />
+              */
+            }
+
+            </group>
+
+            <ambientLight intensity={1} />
+            <directionalLight position={[10, 10, 10]} intensity={0.5} />
           </Suspense>
         </Canvas>
+      </div>
+
+      <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+        <a href="#about" className="w-fit">
+          <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+        </a>
       </div>
     </section>
   );
