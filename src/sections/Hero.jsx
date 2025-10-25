@@ -4,17 +4,11 @@ import { Canvas } from '@react-three/fiber';
 import { useMediaQuery } from 'react-responsive';
 import { PerspectiveCamera } from '@react-three/drei';
 
-import Cube from '../components/Cube.jsx';
-import Rings from '../components/Rings.jsx';
-import ReactLogo from '../components/ReactLogo.jsx';
 import Button from '../components/Button.jsx';
-import Target from '../components/Target.jsx';
 import CanvasLoader from '../components/Loading.jsx';
 import HeroCamera from '../components/HeroCamera.jsx';
 import { calculateSizes } from '../constants/index.js';
 import { HackerRoom } from '../components/HackerRoom.jsx';
-import EnergyCoreCosmic from '../components/EnergyCoreCosmic.jsx';
-import EnergyCore from '../components/EnergyCore.jsx';
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -28,16 +22,28 @@ const Hero = () => {
       className="min-h-screen w-full flex flex-col sm:flex-row items-center justify-between c-space relative"
     >
       {/* ===== LEFT SIDE (TEXT) ===== */}
-      <div className="flex-1 sm:pl-24 px-6 flex flex-col gap-5 z-10 text-left">
-        <h1 className="sm:text-5xl text-3xl font-bold text-white font-generalsans leading-tight">
+      <div className="flex-1 sm:pl-24 px-6 flex flex-col gap-6 z-10 text-left">
+        <h1
+          className="text-5xl md:text-7xl font-extrabold 
+                     bg-gradient-to-r from-[#00C6FF] via-[#8A2BE2] to-[#00C6FF] 
+                     bg-clip-text text-transparent 
+                     drop-shadow-[0_0_25px_rgba(0,198,255,0.3)]
+                     font-generalsans tracking-tight leading-[1.15]"
+        >
           Hi, I’m Tomer <span className="waving-hand">👋</span>
         </h1>
-        <p className="text-gray_gradient sm:text-xl text-lg max-w-md">
-          I’m a passionate computer science student and full-stack developer
-          who turns abstract ideas into functional, scalable systems.  
-          I love exploring deep tech — from AI and data systems to performance-driven C++ servers.
+
+        <p
+          className="text-gray-300 sm:text-2xl text-lg 
+                     max-w-xl leading-relaxed font-light tracking-wide"
+        >
+          I’m a computer science student and full-stack developer passionate about 
+          building systems that merge <span className="text-white font-semibold">technology and creativity</span>.  
+          From backend C++ servers to 3D web experiences, I turn complex ideas into clean, 
+          interactive realities.
         </p>
-        <a href="#about" className="mt-4">
+
+        <a href="#about" className="mt-6">
           <Button
             name="Let's work together"
             isBeam
@@ -55,13 +61,13 @@ const Hero = () => {
 
             <HeroCamera isMobile={isMobile}>
               <HackerRoom
-                scale={isMobile ? 3.5 : 5} // made slightly larger
-                position={[0, -2, 0]}
+                scale={isMobile ? 3.5 : 5}
+                position={[-1.5, -2, 0]}  // 👈 moved slightly left
                 rotation={[0, 0, 0]}
               />
             </HeroCamera>
 
-            <ambientLight intensity={1} />
+            <ambientLight intensity={1.1} />
             <directionalLight position={[10, 10, 10]} intensity={0.6} />
           </Suspense>
         </Canvas>
