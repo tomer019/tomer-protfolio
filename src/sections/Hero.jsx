@@ -23,13 +23,14 @@ const Hero = () => {
     >
       {/* ===== LEFT SIDE (TEXT) ===== */}
       <div className="flex-1 sm:pl-24 px-6 flex flex-col gap-6 z-10 text-left">
-        <h1
-          className="text-5xl md:text-7xl font-extrabold 
-                     bg-gradient-to-r from-[#00C6FF] via-[#8A2BE2] to-[#00C6FF] 
-                     bg-clip-text text-transparent 
-                     drop-shadow-[0_0_25px_rgba(0,198,255,0.3)]
-                     font-generalsans tracking-tight leading-[1.15]"
-        >
+       <h1
+  className="text-6xl md:text-8xl font-black 
+             bg-gradient-to-r from-[#00C6FF] via-[#8A2BE2] to-[#00C6FF] 
+             bg-clip-text text-transparent 
+             drop-shadow-[0_0_35px_rgba(0,198,255,0.45)]
+             font-generalsans tracking-tight leading-[1.1]"
+>
+
           Hi, I’m Tomer <span className="waving-hand">👋</span>
         </h1>
 
