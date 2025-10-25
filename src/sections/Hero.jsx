@@ -43,10 +43,10 @@ const Hero = () => {
           interactive realities.
         </p>
 
-        {/* --- Button slightly more left --- */}
+        {/* --- BUTTON (moved slightly left) --- */}
         <a
           href="#about"
-          className="mt-6 translate-x-[-94px] sm:translate-x-[-114px]"
+          className="mt-6 translate-x-[-14px] sm:translate-x-[-24px]"
         >
           <Button
             name="Let's work together"
@@ -54,7 +54,7 @@ const Hero = () => {
             containerClass="sm:w-fit w-full sm:min-w-72"
           />
         </a>
-      </div> {/* ✅ closing the left-side div */}
+      </div> {/* ✅ properly closed left-side div */}
 
       {/* ===== RIGHT SIDE (3D MODEL) ===== */}
       <div className="flex-1 relative w-full h-[500px] sm:h-screen">
@@ -66,7 +66,7 @@ const Hero = () => {
             <HeroCamera isMobile={isMobile}>
               <HackerRoom
                 scale={isMobile ? 3.5 : 5}
-                position={[-2, -2, 0]}  // 👈 moved even slightly more left
+                position={[-2, -2, 0]}  // 👈 moved a bit more left
                 rotation={[0, 0, 0]}
               />
             </HeroCamera>
