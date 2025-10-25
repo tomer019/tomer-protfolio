@@ -38,10 +38,7 @@ const Hero = () => {
              max-w-2xl leading-relaxed font-normal tracking-wide"
 >
   I’m a computer science student and full-stack developer passionate about 
-  building systems that merge 
-  <span className="text-white font-semibold">
-    technology and creativity
-  </span>.  
+  building systems that merge technology and creativity
   From backend C++ servers to 3D web experiences, I turn complex ideas into clean, 
   interactive realities.
 </p>
