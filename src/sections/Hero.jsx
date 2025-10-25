@@ -44,16 +44,18 @@ const Hero = () => {
         </p>
 
         {/* --- BUTTON (moved slightly left) --- */}
-        <a
-          href="#about"
-          className="mt-6 translate-x-[-84px] sm:translate-x-[-94px]"
-        >
-          <Button
-            name="Let's work together"
-            isBeam
-            containerClass="sm:w-fit w-full sm:min-w-72"
-          />
-        </a>
+       <a
+  href="#about"
+  className="mt-6"
+  style={{ transform: 'translateX(-94px)' }}
+>
+  <Button
+    name="Let's work together"
+    isBeam
+    containerClass="sm:w-fit w-full sm:min-w-72"
+  />
+</a>
+
       </div> {/* ✅ properly closed left-side div */}
 
       {/* ===== RIGHT SIDE (3D MODEL) ===== */}
