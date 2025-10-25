@@ -33,19 +33,19 @@ const Hero = () => {
 
           Hi, I’m Tomer <span className="waving-hand">👋</span>
         </h1>
-
-      <p
-  className="text-gray-100 sm:text-3xl text-xl 
-             max-w-2xl leading-relaxed font-medium tracking-normal"
+<p
+  className="text-gray-200 sm:text-2xl text-xl 
+             max-w-2xl leading-relaxed font-normal tracking-wide"
 >
   I’m a computer science student and full-stack developer passionate about 
   building systems that merge 
-  <span className="text-white font-bold underline decoration-[#00C6FF]/60 decoration-2">
+  <span className="text-white font-semibold">
     technology and creativity
   </span>.  
   From backend C++ servers to 3D web experiences, I turn complex ideas into clean, 
   interactive realities.
 </p>
+
 
 
         {/* --- BUTTON (moved slightly left) --- */}
