@@ -34,8 +34,9 @@ const Hero = () => {
           Hi, I’m Tomer <span className="waving-hand">👋</span>
         </h2>
 <p
-  className="text-gray-200 sm:text-2xl text-xl 
-             max-w-2xl leading-relaxed font-normal tracking-wide"
+ className="text-gray-200 text-2xl sm:text-3xl 
+           max-w-2xl leading-relaxed font-normal tracking-wide"
+
 >
   I’m a computer science student and full-stack developer passionate about 
   building systems that merge technology and creativity
