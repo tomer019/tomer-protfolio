@@ -44,10 +44,10 @@ const Hero = () => {
         </p>
 
         {/* --- BUTTON (moved slightly left) --- */}
-       <a
+<a
   href="#about"
   className="mt-6"
-  style={{ transform: 'translateX(-94px)' }}
+  style={{ transform: 'translateX(-174px)' }} // 👈 הוזז בערך 2 ס"מ נוספים שמאלה
 >
   <Button
     name="Let's work together"
@@ -55,6 +55,7 @@ const Hero = () => {
     containerClass="sm:w-fit w-full sm:min-w-72"
   />
 </a>
+
 
       </div> {/* ✅ properly closed left-side div */}
 
