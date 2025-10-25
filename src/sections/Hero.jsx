@@ -43,14 +43,14 @@ const Hero = () => {
           interactive realities.
         </p>
 
-        <a href="#about" className="mt-6">
-          <Button
-            name="Let's work together"
-            isBeam
-            containerClass="sm:w-fit w-full sm:min-w-72"
-          />
-        </a>
-      </div>
+       <a href="#about" className="mt-6 self-start -ml-3">
+  <Button
+    name="Let's work together"
+    isBeam
+    containerClass="sm:w-fit w-full sm:min-w-72"
+  />
+</a>
+
 
       {/* ===== RIGHT SIDE (3D MODEL) ===== */}
       <div className="flex-1 relative w-full h-[500px] sm:h-screen">
