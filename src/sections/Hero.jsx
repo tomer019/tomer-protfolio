@@ -46,7 +46,7 @@ const Hero = () => {
         {/* --- BUTTON (moved slightly left) --- */}
         <a
           href="#about"
-          className="mt-6 translate-x-[-14px] sm:translate-x-[-24px]"
+          className="mt-6 translate-x-[-84px] sm:translate-x-[-94px]"
         >
           <Button
             name="Let's work together"
