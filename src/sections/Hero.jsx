@@ -43,14 +43,18 @@ const Hero = () => {
           interactive realities.
         </p>
 
-       <a href="#about" className="mt-6 self-start -ml-3">
-  <Button
-    name="Let's work together"
-    isBeam
-    containerClass="sm:w-fit w-full sm:min-w-72"
-  />
-</a>
-
+        {/* --- Button slightly more left --- */}
+        <a
+          href="#about"
+          className="mt-6 translate-x-[-14px] sm:translate-x-[-24px]"
+        >
+          <Button
+            name="Let's work together"
+            isBeam
+            containerClass="sm:w-fit w-full sm:min-w-72"
+          />
+        </a>
+      </div> {/* ✅ closing the left-side div */}
 
       {/* ===== RIGHT SIDE (3D MODEL) ===== */}
       <div className="flex-1 relative w-full h-[500px] sm:h-screen">
@@ -62,7 +66,7 @@ const Hero = () => {
             <HeroCamera isMobile={isMobile}>
               <HackerRoom
                 scale={isMobile ? 3.5 : 5}
-                position={[-1.5, -2, 0]}  // 👈 moved slightly left
+                position={[-2, -2, 0]}  // 👈 moved even slightly more left
                 rotation={[0, 0, 0]}
               />
             </HeroCamera>
