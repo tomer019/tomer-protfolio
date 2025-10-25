@@ -47,7 +47,7 @@ const Hero = () => {
 <a
   href="#about"
   className="mt-6"
-  style={{ transform: 'translateX(-174px)' }} // 👈 הוזז בערך 2 ס"מ נוספים שמאלה
+  style={{ transform: 'translateX(-224px)' }} // 👈 הוזז בערך 2 ס"מ נוספים שמאלה
 >
   <Button
     name="Let's work together"
