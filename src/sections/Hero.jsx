@@ -23,7 +23,7 @@ const Hero = () => {
     >
       {/* ===== LEFT SIDE (TEXT) ===== */}
       <div className="flex-1 sm:pl-24 px-6 flex flex-col gap-6 z-10 text-left">
-       <h3
+      <h1
   className="text-6xl md:text-8xl font-black 
              bg-gradient-to-r from-[#00C6FF] via-[#8A2BE2] to-[#00C6FF] 
              bg-clip-text text-transparent 
@@ -31,8 +31,6 @@ const Hero = () => {
              font-generalsans tracking-tight leading-[1.1]"
 >
 
-          Hi, I’m Tomer <span className="waving-hand">👋</span>
-        </h3>
 <p
  className="text-gray-200 text-2xl sm:text-3xl 
            max-w-2xl leading-relaxed font-normal tracking-wide"
